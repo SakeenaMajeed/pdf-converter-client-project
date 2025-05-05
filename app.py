@@ -14,7 +14,7 @@ from datetime import datetime
 import re
 import base64
 import matplotlib
-matplotlib.use('Agg')  # Set non-interactive backend for matplotlib
+matplotlib.use('Agg') 
 
 def extract_data_from_text(text):
     """
@@ -23,11 +23,11 @@ def extract_data_from_text(text):
     """
     data = {}
     
-    # Simple pattern matching for "Category: Value" or "Category - Value"
+   
     patterns = [
-        r'([A-Za-z\s]+):\s*(\d+\.?\d*)',  # Category: 123
-        r'([A-Za-z\s]+)-\s*(\d+\.?\d*)',   # Category - 123
-        r'([A-Za-z\s]+)\s+(\d+\.?\d*)'     # Category 123
+        r'([A-Za-z\s]+):\s*(\d+\.?\d*)', 
+        r'([A-Za-z\s]+)-\s*(\d+\.?\d*)',  
+        r'([A-Za-z\s]+)\s+(\d+\.?\d*)'     
     ]
     
     for pattern in patterns:
@@ -39,8 +39,7 @@ def extract_data_from_text(text):
                 data[category] = value
             except ValueError:
                 continue
-    
-    # If no data found, create sample data
+
     if not data:
         data = {
             'Category A': 65, 
