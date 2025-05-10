@@ -378,17 +378,17 @@ def main():
     with col1:
         uploaded_file = st.file_uploader("Upload your text file", type=["txt"], 
                                         help="Upload a structured text file with headers, paragraphs, and tables")
-    with col2:
-        st.markdown("""
-        <div style="background-color: #e0e7ff; padding: 15px; border-radius: 10px; margin-top: 10px;">
-            <p style="color: #1e40af; font-size: 14px; margin: 0;">Supports:</p>
-            <ul style="color: #1e40af; font-size: 12px; margin: 5px 0 0 15px; padding: 0;">
-                <li>Headers (#)</li>
-                <li>Tables (Table:)</li>
-                <li>Images (Image:)</li>
-            </ul>
-        </div>
-        """, unsafe_allow_html=True)
+    # with col2:
+    #     st.markdown("""
+    #     <div style="background-color: #e0e7ff; padding: 15px; border-radius: 10px; margin-top: 10px;">
+    #         <p style="color: #1e40af; font-size: 14px; margin: 0;">Supports:</p>
+    #         <ul style="color: #1e40af; font-size: 12px; margin: 5px 0 0 15px; padding: 0;">
+    #             <li>Headers (#)</li>
+    #             <li>Tables (Table:)</li>
+    #             <li>Images (Image:)</li>
+    #         </ul>
+    #     </div>
+    #     """, unsafe_allow_html=True)
 
     if uploaded_file is not None:
         with st.expander("Advanced Options", expanded=False):
