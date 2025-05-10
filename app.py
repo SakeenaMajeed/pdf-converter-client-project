@@ -365,7 +365,6 @@ def main():
     </style>
     """, unsafe_allow_html=True)
 
-    # Header with logo
     st.markdown("""
     <div class="header-container">
         <img src="" class="logo">
